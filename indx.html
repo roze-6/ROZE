@@ -1,11 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roze - واجهة</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>ROZE</h1>
+          <p>واجهة حديثة وجذابة</p>
+        </div>
+      </div>
+
+      <nav class="nav-links" aria-label="روابط">
+        <a href="#features">المميزات</a>
+        <a href="#about">عنّا</a>
+        <a href="#contact">تواصل</a>
+        <a class="btn" href="#" onclick="toast('تم حفظ التفضيل (عرض تجريبي)')">ابدأ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <span class="badge"><span class="dot"></span> واجهة عصريّة جاهزة للاستخدام</span>
+          <h2>حبيب… تصميم يحترم الذوق</h2>
+          <p>
+            هذه صفحة واجهة بتصميم حديث مع تدرجات لونية ولمسات زجاجية (Glassmorphism)،
+            مناسبة لأي مشروع يحتاج مظهر جذاب واحترافي.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button" onclick="toast('مرحباً! هذه مجرد واجهة تجريبية.')">
+              استكشف الواجهة
+              <span aria-hidden="true">➜</span>
+            </button>
+            <a class="btn" href="#features">عرض المميزات</a>
+          </div>
+        </div>
+
+        <aside class="side">
+          <div class="stat-card">
+            <div class="stat-top">
+              <div class="stat-title">
+                <span>ملخص سريع</span>
+                <span class="chip">UI/UX</span>
+              </div>
+            </div>
+
+            <div class="metric-grid">
+              <div class="metric">
+                <b>عصري</b>
+                <span>ستايل حديث مع خلفيات تدرج وتأثيرات ناعمة</span>
+              </div>
+              <div class="metric">
+                <b>جاهز</b>
+                <span>قابل للتعديل بسهولة داخل ملفات HTML و CSS</span>
+              </div>
+              <div class="metric">
+                <b>مرن</b>
+                <span>متجاوب مع الجوال والشاشات المختلفة</span>
+              </div>
+              <div class="metric">
+                <b>خفيف</b>
+                <span>بدون مكتبات خارجية — فقط HTML/CSS</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <h3>المميزات</h3>
+      <div class="grid3">
+        <article class="feature">
+          <div class="icon" aria-hidden="true">✨</div>
+          <h4>تصميم زجاجي</h4>
+          <p>طبقات شفافة وحدود ناعمة تعطي إحساساً فاخرًا.</p>
+        </article>
+        <article class="feature">
+          <div class="icon" aria-hidden="true">⚡</div>
+          <h4>تدرجات لونية</h4>
+          <p>ألوان متناسقة مع حركة خفيفة لمزيد من الحيوية.</p>
+        </article>
+        <article class="feature">
+          <div class="icon" aria-hidden="true">📱</div>
+          <h4>واجهة متجاوبة</h4>
+          <p>تعرض المحتوى بشكل ممتاز على الهواتف والأجهزة اللوحية.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h3>عنّا</h3>
+      <div class="feature">
+        <div class="icon" aria-hidden="true" style="background: rgba(45,226,230,.12); border-color: rgba(45,226,230,.28)">🧠</div>
+        <h4>فكرة الواجهة</h4>
+        <p>
+          الهدف هو توفير صفحة جذابة بصرياً وسهلة التعديل.
+          يمكنك لاحقاً إضافة أقسام مثل: تسجيل دخول، صفحات خدمات، أو محتوى خاص بك.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h3>تواصل</h3>
+      <div class="grid3">
+        <div class="feature">
+          <div class="icon" aria-hidden="true">📩</div>
+          <h4>البريد</h4>
+          <p>mhamadhseno@gmail.com</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden="true" style="background: rgba(255,77,109,.12); border-color: rgba(255,77,109,.28)">☎️</div>
+          <h4>الهاتف</h4>
+          <p>+00 000 000 000</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden="true">📍</div>
+          <h4>الموقع</h4>
+          <p>مدينة / دولة</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="hr"></div>
+      <div>© <span id="year"></span> ROZE. جميع الحقوق محفوظة.</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // simple toast
+    function toast(message){
+      const el = document.createElement('div');
+      el.textContent = message;
+      el.style.position = 'fixed';
+      el.style.left = '50%';
+      el.style.bottom = '22px';
+      el.style.transform = 'translateX(-50%)';
+      el.style.padding = '12px 16px';
+      el.style.borderRadius = '999px';
+      el.style.background = 'rgba(10,14,26,.82)';
+      el.style.border = '1px solid rgba(255,255,255,.16)';
+      el.style.color = 'rgba(234,240,255,.95)';
+      el.style.boxShadow = '0 18px 60px rgba(0,0,0,.45)';
+      el.style.backdropFilter = 'blur(10px)';
+      el.style.zIndex = '9999';
+      el.style.fontWeight = '800';
+      el.style.fontSize = '13px';
+      el.style.opacity = '0';
+      el.style.transition = 'opacity .2s ease, transform .2s ease';
+      document.body.appendChild(el);
+
+      requestAnimationFrame(() => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateX(-50%) translateY(-2px)';
+      });
+
+      setTimeout(() => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateX(-50%) translateY(6px)';
+        setTimeout(() => el.remove(), 220);
+      }, 2100);
+    }
+  </script>
 </body>
 </html>
+
