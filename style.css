@@ -1,4 +1,8 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     background: #0a0a0a;
@@ -6,14 +10,14 @@ body {
     font-family: system-ui, sans-serif;
 }
 
-/* ====================== PROFESSIONAL HEADER ====================== */
+/* ==================== PROFESSIONAL HEADER ==================== */
 header {
     position: fixed;
     top: 0; left: 0; right: 0;
     background: linear-gradient(180deg, #0f0f0f, #1a001a);
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(20px);
     border-bottom: 3px solid #ff00ff;
-    box-shadow: 0 4px 30px rgba(255, 0, 255, 0.15);
+    box-shadow: 0 10px 40px rgba(255, 0, 255, 0.3);
     z-index: 1000;
 }
 
@@ -36,138 +40,72 @@ header {
 
 .logo img {
     height: 62px;
-    border-radius: 14px;
+    border-radius: 16px;
     padding: 5px;
     background: rgba(255,255,255,0.08);
-    box-shadow: 0 0 25px rgba(255, 0, 255, 0.3);
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
+    transition: all 0.4s;
 }
 
 .logo h1 {
     font-size: 32px;
     font-weight: 900;
-    letter-spacing: -1px;
-    background: linear-gradient(90deg, #ff00ff, #ff66ff, #00ffff);
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 35px rgba(255, 0, 255, 0.6);
-}
-
-/* Search Bar Premium Look */
-.search-bar input {
-    width: 100%;
-    max-width: 580px;
-    padding: 16px 26px;
-    background: rgba(30, 30, 30, 0.95);
-    border: 2px solid #ff00ff;
-    border-radius: 50px;
-    color: white;
-    font-size: 17px;
-    box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
-    transition: all 0.4s;
-}
-
-.search-bar input:focus {
-    border-color: #00ffff;
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
-    background: rgba(40, 40, 40, 0.95);
-}
-
-/* Add a subtle badge to look premium */
-.logo::after {
-    content: "PREMIUM";
-    font-size: 10px;
-    background: linear-gradient(#ffd700, #ffaa00);
-    color: #000;
-    padding: 2px 8px;
-    border-radius: 12px;
-    font-weight: bold;
-    position: absolute;
-    margin-top: -8px;
-    margin-left: 48px;
-    box-shadow: 0 0 15px #ffd700;
-}
-.header-container {
-    max-width: 1450px;
-    margin: 0 auto;
-    padding: 15px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo img {
-    height: 58px;
-    border-radius: 12px;           /* حواف ناعمة للوغو */
-    padding: 4px;
-    background: rgba(255,255,255,0.05);
-}
-
-.logo h1 {
-    font-size: 29px;
-    font-weight: 900;
-    background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 30px #ff00ff;
+    text-shadow: 0 0 35px #ff00ff;
 }
 
 /* Search */
 .search-bar input {
     width: 100%;
-    max-width: 550px;
-    padding: 15px 24px;
-    background: #1a1a1a;
+    max-width: 580px;
+    padding: 16px 26px;
+    background: rgba(25,25,35,0.9);
     border: 2px solid #ff00ff;
     border-radius: 50px;
     color: white;
     font-size: 17px;
+    box-shadow: 0 0 25px rgba(255, 0, 255, 0.3);
 }
 
 .search-bar input:focus {
     border-color: #00ffff;
-    box-shadow: 0 0 20px #00ffff;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
 }
 
 /* Title */
 .section-title {
     text-align: center;
-    font-size: 38px;
-    margin: 110px 0 45px;
+    font-size: 40px;
+    margin: 115px 0 45px;
     color: #ff00ff;
-    text-shadow: 0 0 25px #ff00ff;
+    text-shadow: 0 0 40px #ff00ff;
 }
 
-/* Grid */
+/* ==================== VIDEO CARDS ==================== */
 .videos-grid {
     max-width: 1450px;
     margin: 0 auto;
-    padding: 0 15px 50px;
+    padding: 0 15px 60px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 26px;
 }
 
-/* Card + Interactive Blur */
 .video-card {
     background: #111;
-    border-radius: 18px;
+    border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.4s;
-    border: 1px solid #222;
+    transition: all 0.5s ease;
+    border: 1px solid rgba(255,0,255,0.2);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
 }
 
 .video-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 0 40px rgba(255, 0, 255, 0.75);
+    transform: translateY(-15px);
+    box-shadow: 0 25px 60px rgba(255, 0, 255, 0.55);
     border-color: #ff00ff;
 }
 
@@ -181,13 +119,13 @@ header {
 .thumbnail-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;           /* صورة كاملة */
-    transition: all 0.5s ease;
-    filter: blur(4px) brightness(0.75);
+    object-fit: cover;
+    transition: all 0.6s ease;
+    filter: blur(5px) brightness(0.75);
 }
 
 .video-card:hover .thumbnail-container img {
-    filter: blur(0px) brightness(1.1);
+    filter: blur(0) brightness(1.15);
     transform: scale(1.08);
 }
 
@@ -196,38 +134,50 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(255,0,255,0.9);
+    background: linear-gradient(#ff00ff, #ff66ff);
     color: white;
-    width: 58px;
-    height: 58px;
+    width: 62px;
+    height: 62px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 26px;
+    font-size: 28px;
     opacity: 0;
     transition: all 0.4s;
-    box-shadow: 0 0 25px #ff00ff;
+    box-shadow: 0 0 30px #ff00ff;
+    border: 3px solid rgba(255,255,255,0.4);
 }
 
 .video-card:hover .play-button {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.18);
 }
 
 .video-info {
     padding: 16px;
+    text-align: center;
 }
 
 .video-info h3 {
-    font-size: 15.5px;
-    line-height: 1.4;
-    color: #eee;
+    font-size: 15.2px;
+    line-height: 1.45;
+    color: #ddd;
+    font-weight: 500;
 }
 
 /* Mobile */
 @media (max-width: 640px) {
-    .videos-grid { grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: 16px; }
-    .thumbnail-container { height: 168px; }
-    .play-button { width: 48px; height: 48px; font-size: 22px; }
+    .videos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+        gap: 18px;
+    }
+    .thumbnail-container {
+        height: 172px;
+    }
+    .play-button {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
 }
