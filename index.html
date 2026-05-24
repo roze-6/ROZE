@@ -1,53 +1,30 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROZE PRIVATE</title>
-    <meta name="6a97888e-site-verification" content="df3ad983ce7486f5f995613560aa288b">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <span class="logo-icon">✦</span>
-            <span class="logo-text">ROZE</span>
-            <span class="logo-sub">PRIVATE</span>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://i.ibb.co/mVWPNB8f/Chat-GPT-Image-24-2026-05-09-26.png" alt="ROZE">
+                <h1>ROZE PRIVATE</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="🔍 ابحث عن محتوى...">
+            </div>
         </div>
     </header>
-    <section class="hero">
-        <h1 class="neon-text">ROZE</h1>
-        <span class="hero-subtitle">PRIVATE</span>
-        <p class="hero-desc">محتوى حصري للجميع</p>
-    </section>
-    <div class="ad-banner"><div class="exo-ad">مساحة إعلانية - ExoClick</div></div>
-    <main class="container"><div class="video-grid" id="videoGrid"></div></main>
-    <div class="ad-banner"><div class="exo-ad">مساحة إعلانية - ExoClick</div></div>
-    <footer class="footer"><p>© 2026 ROZE PRIVATE - جميع الحقوق محفوظة</p></footer>
-    <div class="video-modal" id="videoModal">
-        <div class="modal-backdrop" onclick="closeVideoModal()"></div>
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeVideoModal()">✕</button>
-            <div class="video-player">
-                <div class="blur-preview" id="blurPreview"></div>
-                <iframe id="videoIframe" allowfullscreen></iframe>
-            </div>
-            <div class="modal-info">
-                <h2 class="modal-title" id="modalTitle"></h2>
-                <div class="modal-meta"><span id="modalViews"></span><span id="modalLikes"></span></div>
-                <p class="modal-desc" id="modalDesc"></p>
-            </div>
-        </div>
-    </div>
-    <div class="ad-popup" id="adPopup">
-        <div class="popup-backdrop" onclick="closeAdPopup()"></div>
-        <div class="popup-content">
-            <button class="popup-close" onclick="closeAdPopup()">✕</button>
-            <div class="popup-header"><span class="popup-icon">▶</span><p>مشاهدة الفيديو</p></div>
-            <div class="popup-ad"><div class="exo-ad">مساحة إعلانية - اضغط لمشاهدة الفيديو</div></div>
-        </div>
-    </div>
-    <script src="app.js"></script>
+
+    <main>
+        <h2 class="section-title"><i class="fas fa-bolt"></i> Trending & Exclusive Content</h2>
+        <div class="videos-grid" id="videoGrid"></div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
