@@ -5,113 +5,122 @@
 }
 
 body {
-    background: #0a0a0a;
-    color: #fff;
+    background: #050505;
+    color: #e0e0e0;
     font-family: system-ui, sans-serif;
 }
 
-/* ==================== PROFESSIONAL HEADER ==================== */
+/* ==================== HEADER ==================== */
 header {
     position: fixed;
     top: 0; left: 0; right: 0;
-    background: linear-gradient(180deg, #0f0f0f, #1a001a);
+    background: rgba(8, 8, 8, 0.95);
     backdrop-filter: blur(20px);
-    border-bottom: 3px solid #ff00ff;
-    box-shadow: 0 10px 40px rgba(255, 0, 255, 0.3);
+    border-bottom: 2px solid #00ffcc;
+    box-shadow: 0 5px 30px rgba(0, 255, 204, 0.2);
     z-index: 1000;
 }
 
 .header-container {
-    max-width: 1450px;
+    max-width: 1480px;
     margin: 0 auto;
-    padding: 16px 20px;
+    padding: 18px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 15px;
 }
 
 .logo img {
-    height: 62px;
-    border-radius: 16px;
-    padding: 5px;
-    background: rgba(255,255,255,0.08);
-    box-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
-    transition: all 0.4s;
+    height: 58px;
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.5);
 }
 
 .logo h1 {
-    font-size: 32px;
+    font-size: 31px;
     font-weight: 900;
-    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    background: linear-gradient(90deg, #00ffcc, #ff00ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 35px #ff00ff;
+    text-shadow: 0 0 30px #00ffcc;
 }
 
-/* Search */
+/* Modern Search */
 .search-bar input {
     width: 100%;
-    max-width: 580px;
-    padding: 16px 26px;
-    background: rgba(25,25,35,0.9);
-    border: 2px solid #ff00ff;
+    max-width: 620px;
+    padding: 17px 24px 17px 52px;
+    background: rgba(20, 20, 30, 0.9);
+    border: 2px solid #00ffcc;
     border-radius: 50px;
-    color: white;
+    color: #fff;
     font-size: 17px;
-    box-shadow: 0 0 25px rgba(255, 0, 255, 0.3);
+    outline: none;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.25);
 }
 
 .search-bar input:focus {
-    border-color: #00ffff;
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+    border-color: #ff00ff;
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.4);
 }
 
-/* Title */
+.search-bar::before {
+    content: "";
+    position: absolute;
+    left: 26px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #00ffcc;
+}
+
+/* Section Title */
 .section-title {
     text-align: center;
-    font-size: 40px;
-    margin: 115px 0 45px;
-    color: #ff00ff;
-    text-shadow: 0 0 40px #ff00ff;
+    font-size: 39px;
+    margin: 115px 0 50px;
+    background: linear-gradient(90deg, #00ffcc, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 40px #00ffcc;
 }
 
 /* ==================== VIDEO CARDS ==================== */
 .videos-grid {
-    max-width: 1450px;
+    max-width: 1480px;
     margin: 0 auto;
-    padding: 0 15px 60px;
+    padding: 0 20px 60px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 26px;
+    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+    gap: 28px;
 }
 
 .video-card {
-    background: #111;
-    border-radius: 20px;
+    background: #0f0f0f;
+    border-radius: 22px;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.5s ease;
-    border: 1px solid rgba(255,0,255,0.2);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    border: 1px solid rgba(0, 255, 204, 0.15);
 }
 
 .video-card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 25px 60px rgba(255, 0, 255, 0.55);
-    border-color: #ff00ff;
+    transform: translateY(-18px) scale(1.04);
+    box-shadow: 0 30px 70px rgba(0, 255, 204, 0.45);
+    border-color: #00ffcc;
 }
 
+/* Interactive Blur + Full Image */
 .thumbnail-container {
     position: relative;
-    width: 100%;
     height: 210px;
     overflow: hidden;
 }
@@ -119,14 +128,14 @@ header {
 .thumbnail-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: all 0.6s ease;
-    filter: blur(5px) brightness(0.75);
+    object-fit: cover;           /* صورة كاملة */
+    transition: all 0.7s ease;
+    filter: blur(6px) brightness(0.75);
 }
 
 .video-card:hover .thumbnail-container img {
-    filter: blur(0) brightness(1.15);
-    transform: scale(1.08);
+    filter: blur(0px) brightness(1.18);
+    transform: scale(1.1);
 }
 
 .play-button {
@@ -134,50 +143,41 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: linear-gradient(#ff00ff, #ff66ff);
-    color: white;
-    width: 62px;
-    height: 62px;
+    background: rgba(0, 255, 204, 0.95);
+    color: #000;
+    width: 58px;
+    height: 58px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
+    font-size: 26px;
     opacity: 0;
     transition: all 0.4s;
-    box-shadow: 0 0 30px #ff00ff;
-    border: 3px solid rgba(255,255,255,0.4);
+    box-shadow: 0 0 25px #00ffcc;
 }
 
 .video-card:hover .play-button {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1.18);
+    transform: translate(-50%, -50%) scale(1.15);
 }
 
 .video-info {
-    padding: 16px;
+    padding: 18px;
     text-align: center;
 }
 
 .video-info h3 {
-    font-size: 15.2px;
-    line-height: 1.45;
+    font-size: 15.5px;
+    line-height: 1.4;
     color: #ddd;
-    font-weight: 500;
 }
 
 /* Mobile */
 @media (max-width: 640px) {
-    .videos-grid {
-        grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
-        gap: 18px;
+    .videos-grid { 
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); 
+        gap: 20px; 
     }
-    .thumbnail-container {
-        height: 172px;
-    }
-    .play-button {
-        width: 50px;
-        height: 50px;
-        font-size: 22px;
-    }
+    .thumbnail-container { height: 168px; }
 }
