@@ -256,8 +256,36 @@
 <p>© 2026 ROZE PRIVATE — ALL RIGHTS RESERVED</p>
 <p>18+ ONLY</p>
 </footer>
-<!-- JuicyAds PopUnders v3 Start -->
+
+<div id="juicy-holder" style="display:none;"></div>
+
+<script type="text/javascript">
+document.querySelectorAll('.video-grid .card .overlay a').forEach(function(btn) {
+    // تعيين عداد نقرات خاص بكل زر بشكل مستقل
+    btn.setAttribute('data-clicks', '0');
+    
+    btn.addEventListener('click', function(e) {
+        let currentClicks = parseInt(this.getAttribute('data-clicks')) + 1;
+        this.setAttribute('data-clicks', currentClicks);
+        
+        // إذا كانت الضغطة الأولى على هذا الزر بالذات
+        if (currentClicks === 1) {
+            e.preventDefault(); // إيقاف فتح رابط الفيديو مؤقتاً لفتح الإعلان
+            
+            const holder = document.getElementById('juicy-holder');
+            holder.innerHTML = ''; // تنظيف الحاوية
+            
+            // حقن كود JuicyAds الأصلي بالحرف ليشتغل فوراً كـ Popunder
+            const juicyScript = document.createElement('script');
+            juicyScript.type = 'text/javascript';
+            juicyScript.src = 'https://js.juicyads.com/jp.php?c=446433w2q284u4r2p2a433e474&u=https%3A%2F%2Fwww.juicyads.rocks';
+            holder.appendChild(juicyScript);
+        }
+        // في الضغطة الثانية وما بعدها على نفس الزر، سيفتح رابط الفيديو الطبيعي المكتوب في الأعلى تلقائياً دون تدخل.
+    });
+});
+</script>
+
 <script type="text/javascript" src="https://js.juicyads.com/jp.php?c=446433w2q284u4r2p2a433e474&u=https%3A%2F%2Fwww.juicyads.rocks"></script>
-<!-- JuicyAds PopUnders v3 End -->
 </body>
 </html>
