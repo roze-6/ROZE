@@ -250,14 +250,6 @@ border-bottom-left-radius:40px;
 border-bottom-right-radius:40px;
 }
 
-.hero::after{
-content:'';
-position:absolute;
-inset:0;
-backdrop-filter:blur(2px);
-background:rgba(255,0,140,0.05);
-}
-
 .hero-content h1{
 font-size:72px;
 text-shadow:0 0 30px #ff00aa;
@@ -372,16 +364,7 @@ height:360px;
 }
 
 .logo{
-width:220px;
-padding:12px;
-border-radius:35px;
-background:rgba(255,255,255,0.03);
-backdrop-filter:blur(15px);
-box-shadow:
-0 0 25px rgba(255,0,170,0.25),
-0 0 60px rgba(255,0,170,0.12);
-
-transition:0.45s ease;
+width:180px;
 }
 
 }
